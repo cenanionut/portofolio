@@ -60,3 +60,18 @@
     }
 }
 
+
+/* Sticky Left Sidebar for Large Viewports */
+@media (min-width: 1200px) {
+    [data-framer-name="Left"] {
+        position: sticky !important;
+        top: 40px !important;
+        height: min-content !important; /* Prevent it from taking full height if flex stretches it */
+        align-self: flex-start !important;
+        z-index: 10;
+    }
+
+    [data-framer-name="Container"] {
+        overflow: visible !important; /* Ensure parent doesn't clip sticky element */
+    }
+}

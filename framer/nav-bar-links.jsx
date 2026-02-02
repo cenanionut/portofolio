@@ -1257,19 +1257,19 @@ var routes = {
 		path: "/blog/:slug",
 	},
 	VackNEXEB: {
-		path: "/experience",
+		path: "/#experience",
 	},
 	VkQTlRoLR: {
-		path: "/tools",
+		path: "/#tools",
 	},
 	aX8JJ_U82: {
-		path: "/blog",
+		path: "/#contact",
 	},
 	anMi4_oPG: {
-		path: "/projects",
+		path: "/#projects",
 	},
 	augiA20Il: {
-		path: "/",
+		path: "/#home",
 	},
 };
 

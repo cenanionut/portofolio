@@ -15869,6 +15869,7 @@ var Component14 = /* @__PURE__ */ React17.forwardRef(function (props, ref) {
 					>
 						<motion15.div
 							className={"framer-130ph47"}
+							id="home"
 							data-framer-name={"Container"}
 							layoutDependency={layoutDependency}
 							layoutId={"IoT4ALvoq"}
@@ -16046,6 +16047,7 @@ var Component14 = /* @__PURE__ */ React17.forwardRef(function (props, ref) {
 									__smartComponentFX={true}
 									__targetOpacity={1}
 									className={"framer-vx18g6"}
+									id="projects"
 									data-framer-name={"Projects"}
 									layoutDependency={layoutDependency}
 									layoutId={"KNlQA9x4B"}
@@ -16440,6 +16442,7 @@ var Component14 = /* @__PURE__ */ React17.forwardRef(function (props, ref) {
 									__smartComponentFX={true}
 									__targetOpacity={1}
 									className={"framer-1im86wl"}
+									id="experience"
 									data-framer-name={"Experience"}
 									layoutDependency={layoutDependency}
 									layoutId={"LE8AMmgdt"}
@@ -16830,6 +16833,7 @@ var Component14 = /* @__PURE__ */ React17.forwardRef(function (props, ref) {
 									__smartComponentFX={true}
 									__targetOpacity={1}
 									className={"framer-18g73h3"}
+									id="tools"
 									data-framer-name={"Tools"}
 									layoutDependency={layoutDependency}
 									layoutId={"F_06KN6Dp"}
@@ -17560,6 +17564,7 @@ var Component14 = /* @__PURE__ */ React17.forwardRef(function (props, ref) {
 									__smartComponentFX={true}
 									__targetOpacity={1}
 									className={"framer-1sxkky2"}
+									id="contact"
 									data-framer-name={"Contact"}
 									layoutDependency={layoutDependency}
 									layoutId={"j18pKqryr"}
@@ -17731,7 +17736,7 @@ var Component14 = /* @__PURE__ */ React17.forwardRef(function (props, ref) {
 var css21 = [
 	"@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
 	".framer-dGUWy.framer-11m3o6v, .framer-dGUWy .framer-11m3o6v { display: block; }",
-	".framer-dGUWy.framer-1cdd84k { align-content: center; align-items: center; display: flex; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1440px; }",
+	".framer-dGUWy.framer-1cdd84k { align-content: center; align-items: center; display: flex; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: visible; padding: 60px 0 270px; position: relative; width: 1440px; }",
 	".framer-dGUWy .framer-130ph47 { align-content: flex-start; align-items: flex-start; display: flex; flex: 1 0 0px; flex-direction: row; flex-wrap: nowrap; gap: 100px; height: min-content; justify-content: flex-start; max-width: 1140px; overflow: visible; padding: 0px; position: relative; width: 1px; }",
 	".framer-dGUWy .framer-12pw29r { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 40px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: sticky; top: 40px; width: min-content; z-index: 1; }",
 	".framer-dGUWy .framer-135ecjv-container { flex: none; height: 640px; position: relative; width: 344px; z-index: 1; }",
@@ -17884,19 +17889,19 @@ var routes = {
 		path: "/blog/:slug",
 	},
 	VackNEXEB: {
-		path: "/experience",
+		path: "/#experience",
 	},
 	VkQTlRoLR: {
-		path: "/tools",
+		path: "/#tools",
 	},
 	aX8JJ_U82: {
-		path: "/blog",
+		path: "/#contact",
 	},
 	anMi4_oPG: {
-		path: "/projects",
+		path: "/#projects",
 	},
 	augiA20Il: {
-		path: "/",
+		path: "/#home",
 	},
 };
 
