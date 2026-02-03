@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "role": "Software Engineer",
+    "company": "Endava",
+    "period": "Jan 2021 - Present",
+    "description": "Experienced Application Management Engineer skilled in web development, debugging, Agile, delivering new products, maintaining existing ones, and continuously learning technologies."
+  },
+  {
+    "id": 2,
+    "role": "Electronic Technician",
+    "company": "Ultratech Int",
+    "period": "2021",
+    "description": "Repaired industrial electronic machines, specialized in Human Machine Interfaces, maintained power inverters, implemented preventative measures, and mentored new colleagues to ensure optimal performance and minimal downtime."
+  },
+  {
+    "id": 3,
+    "role": "Online Computer Science Tutor",
+    "company": "Freelance (Self employed)",
+    "period": "Seasonal 2020",
+    "description": "Taught C++ programming online to high school students, designed assessments, and evaluated progress to enhance learning and retention."
+  },
+  {
+    "id": 4,
+    "role": "Sales Team Lead",
+    "company": "Clock Advertising",
+    "period": "2019 - 2020",
+    "description": "Led a sales team at festivals, promoting products, managing schedules, analyzing performance, providing feedback, and coordinating resources effectively."
+  }
+]

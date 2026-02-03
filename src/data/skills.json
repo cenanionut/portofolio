@@ -1,0 +1,38 @@
+[
+  {
+    "id": "react",
+    "name": "React.js",
+    "category": "JS Framework",
+    "description": "Building dynamic, component-based user interfaces."
+  },
+  {
+    "id": "firebase",
+    "name": "Google Firebase",
+    "category": "App dev platform",
+    "description": "Backend-as-a-Service for realtime apps and auth."
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category": "Powerful dev tool",
+    "description": "Versatile programming for backend and automation."
+  },
+  {
+    "id": "uipath",
+    "name": "UiPath",
+    "category": "Workflow automation tool",
+    "description": "Enterprise RPA and process automation."
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "category": "AI Assistant",
+    "description": "Advanced AI for coding and content generation."
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "category": "Scalable database solution",
+    "description": "NoSQL database for modern applications."
+  }
+]

@@ -75,3 +75,16 @@
         overflow: visible !important; /* Ensure parent doesn't clip sticky element */
     }
 }
+
+/* Hide original Framer Recent Projects section and Legacy Hero/Profile */
+.framer-8kgaas, 
+.framer-11gwg9o, 
+.framer-90ezt7,
+.framer-19idsh7,
+.framer-z8123h,
+.framer-1eng43d,
+.framer-1gm630,
+[data-framer-name="Left"],
+.framer-styles-preset-dkzv6g {
+  display: none !important;
+}

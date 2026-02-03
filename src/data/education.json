@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Agentic Automation Associate",
+    "issuer": "UiPath",
+    "date": "September 2025",
+    "technologies": "Agentic Automation",
+    "iconType": "uipath",
+    "iconColor": "#FA4616"
+  },
+  {
+    "id": 2,
+    "title": "Unity Essentials Pathway",
+    "issuer": "Unity Technologies Corporation",
+    "date": "April 2025",
+    "technologies": "Game Development · Unity",
+    "iconType": "unity",
+    "iconColor": "#FFFFFF"
+  },
+  {
+    "id": 3,
+    "title": "The Modern React Bootcamp (Hooks, Context, NextJS, Router)",
+    "issuer": "Udemy",
+    "date": "February 2025",
+    "technologies": "React, React Hooks, Context API, Next.js, React Router, Styled Components, JSS, and more.",
+    "iconType": "react",
+    "iconColor": "#61DAFB"
+  },
+  {
+    "id": 4,
+    "title": "React – The Complete Guide 2025 (incl. Next.js, Redux)",
+    "issuer": "Udemy",
+    "date": "In progress",
+    "technologies": "React, Hooks, Redux, React Router, Next.js, Best Practices and way more.",
+    "iconType": "react_redux",
+    "iconColor": "#61DAFB"
+  }
+]
