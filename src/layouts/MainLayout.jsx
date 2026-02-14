@@ -7,8 +7,8 @@ const MainLayout = ({ children }) => {
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
         
         {/* Left Column - Sticky Profile */}
-        <div className="w-full lg:w-[400px] flex-shrink-0">
-            <div className="lg:sticky lg:top-10">
+        <div className="w-full lg:w-[340px] flex-shrink-0 overflow-visible">
+            <div className="lg:sticky lg:top-10 overflow-visible">
                  <ProfileCard />
             </div>
         </div>

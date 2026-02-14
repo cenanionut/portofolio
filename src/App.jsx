@@ -4,6 +4,7 @@ import RecentProjects from './components/RecentProjects'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Education from './components/Education'
+import Contact from './components/Contact'
 import MainLayout from './layouts/MainLayout'
 import Hero from './sections/Hero'
 import FocusCards from './sections/FocusCards'
@@ -35,6 +36,7 @@ export default function App() {
         <Experience />
         <Skills />
         <Education />
+        <Contact />
       </MainLayout>
     </div>
   )

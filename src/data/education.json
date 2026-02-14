@@ -34,5 +34,23 @@
     "technologies": "React, Hooks, Redux, React Router, Next.js, Best Practices and way more.",
     "iconType": "react_redux",
     "iconColor": "#61DAFB"
+  },
+  {
+    "id": 5,
+    "title": "Typescript: The Complete Developer's Guide",
+    "issuer": "Udemy",
+    "date": "In progress",
+    "technologies": "Typescript, React, Redux, Node.js, Express, MongoDB, and more.",
+    "iconType": "typescript",
+    "iconColor": "#3178C6"
+  },
+  {
+    "id": 6,
+    "title": "Fundamentals of digital marketing",
+    "issuer": "Google",
+    "date": "Issued May 2022",
+    "technologies": "SEO, SEM, Social Media, Content Marketing, Email Marketing, and more.",
+    "iconType": "google",
+    "iconColor": "#4285F4"
   }
 ]
