@@ -3,7 +3,7 @@ import ProfileCard from '../components/ProfileCard';
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-5 pt-10 pb-20">
+    <div className="w-full max-w-[1440px] mx-auto px-5 pt-10 pb-10 lg:pb-20">
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
         
         {/* Left Column - Sticky Profile */}
@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
         </div>
 
         {/* Right Column - Scrollable Content */}
-        <div className="flex-1 flex flex-col gap-20">
+        <div className="flex-1 flex flex-col gap-10 lg:gap-20">
             {children}
         </div>
 

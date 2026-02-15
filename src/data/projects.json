@@ -5,7 +5,7 @@
     "description": "Android App - Search products, manage inventory lists, and check real-time prices instantly for your business",
     "tags": ["ReactNative", "Firebase"],
     "link": "#",
-    "image": "https://framerusercontent.com/images/X6j59g2v3F9C7Q2D6.jpg" 
+    "image": "/stock.png" 
   },
   {
     "id": "yelpcamp",
@@ -13,7 +13,7 @@
     "description": "Web App - Discover, review, and share campgrounds from around the world.",
     "tags": ["Javascript", "Node.js", "MongoDB"],
     "link": "#",
-    "image": "https://framerusercontent.com/images/X6j59g2v3F9C7Q2D6.jpg"
+    "image": "/yelpcamp.png"
   },
   {
     "id": "burgerbuilder",
@@ -21,7 +21,7 @@
     "description": "Web App - Build your perfect custom burger with real-time visual preview, then login and order instantly.",
     "tags": ["React", "CSS3", "Firebase"],
     "link": "#",
-    "image": "https://framerusercontent.com/images/X6j59g2v3F9C7Q2D6.jpg"
+    "image": "/burger.png"
   },
   {
     "id": "smartpanel",
@@ -29,7 +29,7 @@
     "description": "Intelligent Solar Panel System",
     "tags": ["JavaScript", "Bootstrap", "Firebase", "Arduino"],
     "link": "#",
-    "image": "https://framerusercontent.com/images/X6j59g2v3F9C7Q2D6.jpg"
+    "image": "solar.png"
   },
   {
     "id": "cnnkitchen",
@@ -37,6 +37,6 @@
     "description": "Culinary Design Showcase",
     "tags": ["SAAS", "Javascript", "Firebase"],
     "link": "#",
-    "image": "https://framerusercontent.com/images/X6j59g2v3F9C7Q2D6.jpg"
+    "image": "/restaurant.png"
   }
 ]

@@ -2,37 +2,61 @@
   {
     "id": "react",
     "name": "React.js",
-    "category": "JS Framework",
-    "description": "Building dynamic, component-based user interfaces."
+    "category": "Frontend UI Library",
+    "icon": "react"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "category": "Server-Side Runtime",
+    "icon": "nodejs"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "category": "Typed JavaScript Superset",
+    "icon": "typescript"
   },
   {
     "id": "firebase",
     "name": "Google Firebase",
-    "category": "App dev platform",
-    "description": "Backend-as-a-Service for realtime apps and auth."
+    "category": "Cloud Backend Platform",
+    "icon": "firebase"
   },
   {
     "id": "python",
     "name": "Python",
-    "category": "Powerful dev tool",
-    "description": "Versatile programming for backend and automation."
+    "category": "General-Purpose Language",
+    "icon": "python"
   },
   {
     "id": "uipath",
     "name": "UiPath",
-    "category": "Workflow automation tool",
-    "description": "Enterprise RPA and process automation."
+    "category": "Enterprise RPA Platform",
+    "icon": "uipath"
+  },
+  {
+    "id": "antigravity",
+    "name": "Antigravity",
+    "category": "AI-Powered Coding Agent",
+    "icon": "antigravity"
   },
   {
     "id": "claude",
     "name": "Claude",
-    "category": "AI Assistant",
-    "description": "Advanced AI for coding and content generation."
+    "category": "Conversational AI Model",
+    "icon": "claude"
   },
   {
     "id": "mongodb",
     "name": "MongoDB",
-    "category": "Scalable database solution",
-    "description": "NoSQL database for modern applications."
+    "category": "NoSQL Document Database",
+    "icon": "mongodb"
+  },
+  {
+    "id": "github",
+    "name": "Git & GitHub",
+    "category": "Version Control & Collaboration",
+    "icon": "github"
   }
 ]

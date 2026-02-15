@@ -7,7 +7,11 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.a
       href={project.link}
-      className="flex flex-col md:flex-row gap-8 w-full group text-left"
+      className="flex flex-col items-center md:items-start md:flex-row gap-8 w-full group text-center md:text-left"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
       whileHover={{ x: 10, transition: { duration: 0.2 } }}
     >
       {/* Image - Rounded square with White Content */}
@@ -29,7 +33,7 @@ const ProjectCard = ({ project }) => {
 
       {/* Content */}
       <div className="flex flex-col flex-grow py-2 relative">
-         <div className="flex justify-between items-start w-full">
+         <div className="flex justify-center md:justify-between items-center md:items-start gap-3 w-full">
              <div>
                 <h3 className="text-white text-[32px] font-bold font-sans leading-tight mb-2">
                   {project.title}

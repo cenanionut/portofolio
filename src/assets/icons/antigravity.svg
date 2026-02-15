@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="ag-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="46" fill="url(#ag-grad)" />
+  <!-- Stylized "A" letter -->
+  <path d="M50 18L27 78H37L42 64H58L63 78H73L50 18Z M45 54L50 38L55 54H45Z" fill="white"/>
+  <!-- Orbit ring -->
+  <ellipse cx="50" cy="50" rx="40" ry="14" stroke="white" stroke-width="2.5" stroke-opacity="0.5" fill="none" transform="rotate(-25 50 50)"/>
+  <!-- Small orbiting dot -->
+  <circle cx="82" cy="38" r="4" fill="white" fill-opacity="0.9"/>
+</svg>

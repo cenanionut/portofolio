@@ -38,7 +38,7 @@ const GreenCardSVG = () => (
 
 const FocusCards = () => {
   return (
-    <div className="w-full max-w-[800px] flex flex-col md:flex-row gap-[20px] md:gap-[30px] mb-20 lg:mb-0">
+    <div className="w-full max-w-[800px] flex flex-col items-center md:flex-row gap-[20px] md:gap-[30px] mb-10 lg:mb-0">
       
       {/* Orange Card - Fixed Width */}
       <div 

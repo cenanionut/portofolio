@@ -51,7 +51,7 @@ const Icons = {
 
 const EducationCard = ({ item }) => (
   <motion.div 
-    className="flex flex-col md:flex-row gap-6 md:gap-8 items-start mb-12 group"
+    className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start mb-12 group"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -68,7 +68,7 @@ const EducationCard = ({ item }) => (
     </div>
 
     {/* Content */}
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 text-center md:text-left">
       <h3 className="text-white text-[24px] font-bold font-sans leading-tight group-hover:text-[#FF6B00] transition-colors">
         {item.title}
       </h3>
@@ -93,12 +93,18 @@ const Education = () => {
     };
 
   return (
-    <div className="w-full flex flex-col items-start py-20 px-0 relative z-10" id="education">
+    <div className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="education">
       {/* Title */}
-      <h2 className="text-white text-[clamp(40px,8vw,90px)] font-[900] leading-[0.9] -tracking-[0.04em] uppercase font-sans mb-20">
+      <motion.h2
+        className="text-white text-[clamp(50px,8vw,100px)] font-[900] leading-[0.9] -tracking-[0.04em] uppercase font-sans mb-10 md:mb-20 text-center md:text-left"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <span className="block text-white">CERTIFICATES</span>
         <span className="block text-[#333333]">EDUCATION</span>
-      </h2>
+      </motion.h2>
 
       {/* List */}
       <div className="w-full flex flex-col">
