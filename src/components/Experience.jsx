@@ -11,7 +11,7 @@ const ExperienceCard = ({ item }) => (
     transition={{ duration: 0.5 }}
   >
     {/* Company Name (Orange) */}
-    <h3 className="text-[#FF6B00] text-[32px] font-bold font-sans leading-tight">
+    <h3 className="text-[#FF6B00] text-[clamp(24px,5vw,32px)] font-bold font-sans leading-tight">
         {item.company}
     </h3>
 
@@ -37,17 +37,19 @@ const Experience = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="experience">
+    <section className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="experience" aria-labelledby="experience-heading">
       {/* Title */}
       <motion.h2
+        id="experience-heading"
         className="text-white text-[clamp(50px,8vw,100px)] font-[900] leading-[0.9] -tracking-[0.04em] uppercase font-sans mb-10 md:mb-20 text-center md:text-left"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="block text-white">4 YEARS OF</span>
-        <span className="block text-[#333333]">EXPERIENCE</span>
+        <span className="sr-only">4 Years of Experience</span>
+        <span className="block text-white" aria-hidden="true">4 YEARS OF</span>
+        <span className="block text-[#333333]" aria-hidden="true">EXPERIENCE</span>
       </motion.h2>
 
       {/* List */}
@@ -68,7 +70,7 @@ const Experience = () => {
             </button>
        </div>
       )}
-    </div>
+    </section>
   );
 };
 

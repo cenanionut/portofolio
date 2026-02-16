@@ -13,6 +13,7 @@ const ProjectCard = ({ project }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       whileHover={{ x: 10, transition: { duration: 0.2 } }}
+      whileTap={{ x: 5, transition: { duration: 0.1 } }}
     >
       {/* Image - Rounded square with White Content */}
       <div className="w-[120px] h-[120px] md:w-[160px] md:h-[160px] flex-shrink-0 rounded-[24px] overflow-hidden bg-white relative shadow-sm">
@@ -35,14 +36,14 @@ const ProjectCard = ({ project }) => {
       <div className="flex flex-col flex-grow py-2 relative">
          <div className="flex justify-center md:justify-between items-center md:items-start gap-3 w-full">
              <div>
-                <h3 className="text-white text-[32px] font-bold font-sans leading-tight mb-2">
+                <h3 className="text-white text-[clamp(24px,5vw,32px)] font-bold font-sans leading-tight mb-2">
                   {project.title}
                 </h3>
              </div>
              
              {/* Arrow Icon */}
              <div className="text-[#FF6B00] transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
                  </svg>

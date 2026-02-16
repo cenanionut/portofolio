@@ -6,6 +6,7 @@ const OrangeCardSVG = () => (
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 422 284" 
     fill="none"
+    aria-hidden="true"
     className="absolute -right-[36px] -top-[60px] w-[422px] h-[284px] pointer-events-none"
     style={{ mixBlendMode: 'overlay', opacity: 0.3 }}
   >
@@ -24,6 +25,7 @@ const GreenCardSVG = () => (
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 422 284" 
     fill="none"
+    aria-hidden="true"
     className="absolute -right-[36px] -top-[60px] w-[422px] h-[284px] pointer-events-none"
   >
     <path 
@@ -42,8 +44,11 @@ const FocusCards = () => {
       
       {/* Orange Card - Fixed Width */}
       <div 
-        className="relative overflow-hidden rounded-[10px] p-[32px] flex flex-col justify-between min-h-[260px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02] shrink-0 w-full md:w-[340px]"
+        className="relative overflow-hidden rounded-[10px] p-[32px] flex flex-col justify-between min-h-[260px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02] active:scale-[1.02] shrink-0 w-full md:w-[340px]"
         style={{ backgroundColor: 'rgb(244, 108, 56)' }}
+        tabIndex={0}
+        role="link"
+        aria-label="Interactive Apps & Motion Design"
       >
         <OrangeCardSVG />
         
@@ -56,7 +61,7 @@ const FocusCards = () => {
               INTERACTIVE APPS &<br/>MOTION DESIGN
             </h3>
             
-            <div className="w-[40px] h-[40px] border border-white/30 rounded-[8px] flex items-center justify-center shrink-0 transition-colors group-hover:bg-white/10">
+            <div className="w-[44px] h-[44px] border border-white/30 rounded-[8px] flex items-center justify-center shrink-0 transition-colors group-hover:bg-white/10 group-active:bg-white/10" aria-hidden="true">
                 <ArrowRight className="text-white" size={20} />
             </div>
         </div>
@@ -64,8 +69,11 @@ const FocusCards = () => {
 
       {/* Green Card - Fluid Width */}
       <div 
-        className="relative overflow-hidden rounded-[10px] p-[32px] flex flex-col justify-between min-h-[260px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02] grow w-full"
+        className="relative overflow-hidden rounded-[10px] p-[32px] flex flex-col justify-between min-h-[260px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02] active:scale-[1.02] grow w-full"
         style={{ backgroundColor: 'rgb(197, 255, 65)' }}
+        tabIndex={0}
+        role="link"
+        aria-label="Enterprise Automation & Agentic Robots"
       >
         <GreenCardSVG />
 
@@ -78,7 +86,7 @@ const FocusCards = () => {
              ENTERPRISE AUTOMATION & AGENTIC ROBOTS
             </h3>
 
-            <div className="w-[40px] h-[40px] border border-[rgb(21,19,18)]/20 rounded-[8px] flex items-center justify-center shrink-0 transition-colors group-hover:bg-[rgb(21,19,18)]/5">
+            <div className="w-[44px] h-[44px] border border-[rgb(21,19,18)]/20 rounded-[8px] flex items-center justify-center shrink-0 transition-colors group-hover:bg-[rgb(21,19,18)]/5 group-active:bg-[rgb(21,19,18)]/5" aria-hidden="true">
                 <ArrowRight className="text-[rgb(21,19,18)]" size={20} />
             </div>
         </div>

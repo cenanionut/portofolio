@@ -8,13 +8,13 @@ const MainLayout = ({ children }) => {
         
         {/* Left Column - Sticky Profile */}
         <div className="w-full lg:w-[340px] flex-shrink-0 overflow-visible">
-            <div className="lg:sticky lg:top-10 overflow-visible">
+            <div className="lg:sticky lg:top-[120px] overflow-visible">
                  <ProfileCard />
             </div>
         </div>
 
         {/* Right Column - Scrollable Content */}
-        <div className="flex-1 flex flex-col gap-10 lg:gap-20">
+        <div className="flex-1 flex flex-col">
             {children}
         </div>
 

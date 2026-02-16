@@ -9,6 +9,7 @@ const ProfileCard = () => {
       {/* Dashed Orange Arc — curves from top-center, around top-left, down the left side */}
       <svg
         className="absolute pointer-events-none z-10"
+        aria-hidden="true"
         style={{
           top: '-30px',
           left: '-35px',
@@ -42,7 +43,7 @@ const ProfileCard = () => {
           boxShadow: '0 4px 12px rgba(255, 93, 1, 0.4)',
         }}
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true">
           <path d="M12 23c-3.866 0-7-3.134-7-7 0-3.107 1.956-5.47 3.5-7.5.378-.497.837-1.044 1.225-1.575C10.475 5.87 11 4.677 11 3c0 0 2.5 1 3.5 3.5.25.625.5 1.625.5 2.5 0 1.236-.484 2.284-1 3-.516.716-1 1.414-1 2.5 0 1.381 1.119 2.5 2.5 2.5 .524 0 1.01-.161 1.411-.436C16.088 18.674 14.2 23 12 23z"/>
         </svg>
       </div>
@@ -67,33 +68,36 @@ const ProfileCard = () => {
         </h2>
 
         {/* Bio */}
-        <p className="text-[#888888] text-[15px] leading-relaxed px-10 mt-5 mb-6 font-medium">
+        <p className="text-[#767676] text-[15px] leading-relaxed px-10 mt-5 mb-6 font-medium">
           Blending creativity with code to craft impactful digital products.
         </p>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-7 pb-10">
+        <div className="flex items-center gap-3 pb-10">
           <a 
             href="https://www.linkedin.com/in/ionut-cenan/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-[#FF5D01] hover:scale-110 transition-transform duration-200"
+            aria-label="LinkedIn profile"
+            className="p-[11px] text-[#FF5D01] hover:scale-110 transition-transform duration-200"
           >
-            <Linkedin size={22} />
+            <Linkedin size={22} aria-hidden="true" />
           </a>
           <a 
             href="https://github.com/cenanionut" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-[#FF5D01] hover:scale-110 transition-transform duration-200"
+            aria-label="GitHub profile"
+            className="p-[11px] text-[#FF5D01] hover:scale-110 transition-transform duration-200"
           >
-            <Github size={22} />
+            <Github size={22} aria-hidden="true" />
           </a>
           <a 
             href="mailto:contact@ionutcenan.com" 
-            className="text-[#FF5D01] hover:scale-110 transition-transform duration-200"
+            aria-label="Send email"
+            className="p-[11px] text-[#FF5D01] hover:scale-110 transition-transform duration-200"
           >
-            <Mail size={22} />
+            <Mail size={22} aria-hidden="true" />
           </a>
         </div>
       </div>

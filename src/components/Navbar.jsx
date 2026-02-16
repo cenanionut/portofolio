@@ -19,6 +19,7 @@ const Navbar = () => {
                         href={item.href}
                         className="p-3 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
                         aria-label={item.label}
+                        title={item.label}
                     >
                         <item.icon size={20} strokeWidth={2} />
                     </a>

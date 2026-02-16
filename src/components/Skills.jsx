@@ -49,7 +49,7 @@ const SkillCard = ({ skill, index }) => (
       <h3 className="text-white text-[17px] font-bold leading-tight font-sans">
         {skill.name}
       </h3>
-      <span className="text-[#888888] text-[14px] leading-snug">
+      <span className="text-[#999999] text-[14px] leading-snug">
         {skill.category}
       </span>
     </div>
@@ -58,17 +58,19 @@ const SkillCard = ({ skill, index }) => (
 
 const Skills = () => {
   return (
-    <div className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="skills">
+    <section className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="skills" aria-labelledby="skills-heading">
       {/* Title */}
       <motion.h2
+        id="skills-heading"
         className="text-white text-[clamp(50px,8vw,100px)] font-[900] leading-[0.9] -tracking-[0.04em] uppercase font-sans mb-10 md:mb-16 text-center md:text-left"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="block text-white">SKILLS &</span>
-        <span className="block text-[#333333]">TOOLS</span>
+        <span className="sr-only">Skills & Tools</span>
+        <span className="block text-white" aria-hidden="true">SKILLS &</span>
+        <span className="block text-[#333333]" aria-hidden="true">TOOLS</span>
       </motion.h2>
 
       {/* 2-Column Grid */}
@@ -77,7 +79,7 @@ const Skills = () => {
           <SkillCard key={skill.id} skill={skill} index={index} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
