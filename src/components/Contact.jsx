@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ref, push, serverTimestamp } from 'firebase/database';
+import { db } from '../firebase';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -7,11 +9,11 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    budget: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -23,7 +25,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (isSubmitting) return; // Extra guard against rapid clicks
 
@@ -35,15 +37,27 @@ const Contact = () => {
 
     setErrors({});
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate async submission (swap for real API call later)
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    try {
+      const contactRef = ref(db, 'contact');
+      await push(contactRef, {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        timestamp: serverTimestamp()
+      });
+
       setIsSubmitting(false);
       setSubmitSuccess(true);
-      setFormData({ name: '', email: '', budget: '', message: '' });
-      setTimeout(() => setSubmitSuccess(false), 4000);
-    }, 1200);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setSubmitSuccess(false), 5000);
+    } catch (error) {
+      console.error("Firebase submission error:", error);
+      setIsSubmitting(false);
+      setSubmitError("Failed to launch. Please check your connection and try again.");
+      setTimeout(() => setSubmitError(null), 5000);
+    }
   };
 
   return (
@@ -122,30 +136,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Budget */}
-        <div className="flex flex-col gap-2">
-          <label htmlFor="contact-budget" className="text-[#999999] text-sm font-sans">
-            Budget
-          </label>
-          <select
-            id="contact-budget"
-            name="budget"
-            value={formData.budget}
-            onChange={handleChange}
-            className="w-full bg-[#2A2A2A] border border-white/5 rounded-[12px] px-5 py-4 text-white text-[16px] font-sans outline-none focus:border-[#FF6B00]/50 transition-colors appearance-none cursor-pointer"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'right 16px center'
-            }}
-          >
-            <option value="" className="bg-[#1A1A1A]">Select...</option>
-            <option value="500-1000" className="bg-[#1A1A1A]">$500 - $1,000</option>
-            <option value="1000-3000" className="bg-[#1A1A1A]">$1,000 - $3,000</option>
-            <option value="3000-5000" className="bg-[#1A1A1A]">$3,000 - $5,000</option>
-            <option value="5000+" className="bg-[#1A1A1A]">$5,000+</option>
-          </select>
-        </div>
+
 
         {/* Message */}
         <div className="flex flex-col gap-2">
@@ -206,6 +197,25 @@ const Contact = () => {
           )}
         </AnimatePresence>
       </motion.form>
+      
+       {/* Error Message */}
+       <AnimatePresence>
+          {submitError && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="w-full text-center py-3 px-4 rounded-[12px] bg-red-500/10 border border-red-500/20 mt-4"
+              role="status"
+              aria-live="polite"
+            >
+              <p className="text-red-400 font-sans font-medium">
+                ⚠ {submitError}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
     </section>
   );
 };

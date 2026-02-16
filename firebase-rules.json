@@ -1,0 +1,26 @@
+{
+  "rules": {
+    ".read": false,
+    "contact": {
+      "$messageId": {
+        ".write": "!data.exists() && newData.exists()",
+        ".validate": "newData.hasChildren(['name', 'email', 'message', 'timestamp'])",
+        
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length < 100"
+        },
+        "email": {
+          ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+        },
+        "message": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length < 5000"
+        },
+
+        "timestamp": {
+          ".validate": "newData.val() <= now" 
+        },
+        "$other": { ".validate": false } 
+      }
+    }
+  }
+}
