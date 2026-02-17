@@ -1,6 +1,9 @@
 {
   "rules": {
     ".read": false,
+    "data": {
+      ".read": true
+    },
     "contact": {
       "$messageId": {
         ".write": "!data.exists() && newData.exists()",

@@ -1,0 +1,192 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "title": "Agentic Automation Associate",
+      "issuer": "UiPath",
+      "date": "September 2025",
+      "technologies": "Agentic Automation",
+      "iconType": "uipath",
+      "iconColor": "#FA4616"
+    },
+    {
+      "id": 2,
+      "title": "Unity Essentials Pathway",
+      "issuer": "Unity Technologies Corporation",
+      "date": "April 2025",
+      "technologies": "Game Development · Unity",
+      "iconType": "unity",
+      "iconColor": "#FFFFFF"
+    },
+    {
+      "id": 3,
+      "title": "The Modern React Bootcamp (Hooks, Context, NextJS, Router)",
+      "issuer": "Udemy",
+      "date": "February 2025",
+      "technologies": "React, React Hooks, Context API, Next.js, React Router, Styled Components, JSS, and more.",
+      "iconType": "react",
+      "iconColor": "#61DAFB"
+    },
+    {
+      "id": 4,
+      "title": "React – The Complete Guide 2025 (incl. Next.js, Redux)",
+      "issuer": "Udemy",
+      "date": "In progress",
+      "technologies": "React, Hooks, Redux, React Router, Next.js, Best Practices and way more.",
+      "iconType": "react_redux",
+      "iconColor": "#61DAFB"
+    },
+    {
+      "id": 5,
+      "title": "Typescript: The Complete Developer's Guide",
+      "issuer": "Udemy",
+      "date": "In progress",
+      "technologies": "Typescript, React, Redux, Node.js, Express, MongoDB, and more.",
+      "iconType": "typescript",
+      "iconColor": "#3178C6"
+    },
+    {
+      "id": 6,
+      "title": "Fundamentals of digital marketing",
+      "issuer": "Google",
+      "date": "Issued May 2022",
+      "technologies": "SEO, SEM, Social Media, Content Marketing, Email Marketing, and more.",
+      "iconType": "google",
+      "iconColor": "#4285F4"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Software Engineer",
+      "company": "Endava",
+      "period": "Jan 2021 - Present",
+      "description": "Experienced Application Management Engineer skilled in web development, debugging, Agile, delivering new products, maintaining existing ones, and continuously learning technologies."
+    },
+    {
+      "id": 2,
+      "role": "Electronic Technician",
+      "company": "Ultratech Int",
+      "period": "2021",
+      "description": "Repaired industrial electronic machines, specialized in Human Machine Interfaces, maintained power inverters, implemented preventative measures, and mentored new colleagues to ensure optimal performance and minimal downtime."
+    },
+    {
+      "id": 3,
+      "role": "Online Computer Science Tutor",
+      "company": "Freelance (Self employed)",
+      "period": "Seasonal 2020",
+      "description": "Taught C++ programming online to high school students, designed assessments, and evaluated progress to enhance learning and retention."
+    },
+    {
+      "id": 4,
+      "role": "Sales Team Lead",
+      "company": "Clock Advertising",
+      "period": "2019 - 2020",
+      "description": "Led a sales team at festivals, promoting products, managing schedules, analyzing performance, providing feedback, and coordinating resources effectively."
+    }
+  ],
+  "projects": [
+    {
+      "id": "stockcheck",
+      "title": "StockCheck",
+      "description": "Android App - Search products, manage inventory lists, and check real-time prices instantly for your business",
+      "tags": ["ReactNative", "Firebase"],
+      "link": "#",
+      "image": "/stock.png" 
+    },
+    {
+      "id": "yelpcamp",
+      "title": "YelpCamp",
+      "description": "Web App - Discover, review, and share campgrounds from around the world.",
+      "tags": ["Javascript", "Node.js", "MongoDB"],
+      "link": "#",
+      "image": "/yelpcamp.png"
+    },
+    {
+      "id": "burgerbuilder",
+      "title": "BurgerBuilder",
+      "description": "Web App - Build your perfect custom burger with real-time visual preview, then login and order instantly.",
+      "tags": ["React", "CSS3", "Firebase"],
+      "link": "#",
+      "image": "/burger.png"
+    },
+    {
+      "id": "smartpanel",
+      "title": "SmartPanel",
+      "description": "Intelligent Solar Panel System",
+      "tags": ["JavaScript", "Bootstrap", "Firebase", "Arduino"],
+      "link": "#",
+      "image": "solar.png"
+    },
+    {
+      "id": "cnnkitchen",
+      "title": "CNNKitchen",
+      "description": "Culinary Design Showcase",
+      "tags": ["SAAS", "Javascript", "Firebase"],
+      "link": "#",
+      "image": "/restaurant.png"
+    }
+  ],
+  "skills": [
+    {
+      "id": "react",
+      "name": "React.js",
+      "category": "Frontend UI Library",
+      "icon": "react"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "Server-Side Runtime",
+      "icon": "nodejs"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "Typed JavaScript Superset",
+      "icon": "typescript"
+    },
+    {
+      "id": "firebase",
+      "name": "Google Firebase",
+      "category": "Cloud Backend Platform",
+      "icon": "firebase"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "General-Purpose Language",
+      "icon": "python"
+    },
+    {
+      "id": "uipath",
+      "name": "UiPath",
+      "category": "Enterprise RPA Platform",
+      "icon": "uipath"
+    },
+    {
+      "id": "antigravity",
+      "name": "Antigravity",
+      "category": "AI-Powered Coding Agent",
+      "icon": "antigravity"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "category": "Conversational AI Model",
+      "icon": "claude"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "NoSQL Document Database",
+      "icon": "mongodb"
+    },
+    {
+      "id": "github",
+      "name": "Git & GitHub",
+      "category": "Version Control & Collaboration",
+      "icon": "github"
+    }
+  ]
+}

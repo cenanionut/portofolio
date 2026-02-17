@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import skillsData from '../data/skills.json';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 // Import icons
 import reactIcon from '../assets/icons/react.svg';
@@ -57,6 +57,11 @@ const SkillCard = ({ skill, index }) => (
 );
 
 const Skills = () => {
+  const { data, loading } = usePortfolioData();
+  const skillsData = data.skills || [];
+
+  if (loading) return <div className="text-white text-center py-20">Loading Skills...</div>;
+
   return (
     <section className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="skills" aria-labelledby="skills-heading">
       {/* Title */}

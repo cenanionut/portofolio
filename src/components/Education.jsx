@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import educationData from '../data/education.json';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const Icons = {
   uipath: (
@@ -85,12 +85,16 @@ const EducationCard = ({ item }) => (
 );
 
 const Education = () => {
+    const { data, loading } = usePortfolioData();
+    const educationData = data.education || [];
     const [visibleCount, setVisibleCount] = React.useState(4);
     const displayedEducation = educationData.slice(0, visibleCount);
   
     const handleLoadMore = () => {
       setVisibleCount(educationData.length);
     };
+
+    if (loading) return <div className="text-white text-center py-20">Loading Education...</div>;
 
   return (
     <section className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="education" aria-labelledby="education-heading">

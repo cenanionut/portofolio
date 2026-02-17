@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import experienceData from '../data/experience.json';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const ExperienceCard = ({ item }) => (
   <motion.div 
@@ -29,12 +29,16 @@ const ExperienceCard = ({ item }) => (
 );
 
 const Experience = () => {
+  const { data, loading } = usePortfolioData();
+  const experienceData = data.experience || [];
   const [visibleCount, setVisibleCount] = useState(2);
   const displayedExperience = experienceData.slice(0, visibleCount);
 
   const handleLoadMore = () => {
     setVisibleCount(experienceData.length);
   };
+
+  if (loading) return <div className="text-white text-center py-20">Loading Experience...</div>;
 
   return (
     <section className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="experience" aria-labelledby="experience-heading">

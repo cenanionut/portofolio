@@ -1,15 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import projectsData from '../data/projects.json';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const RecentProjects = () => {
+    const { data, loading } = usePortfolioData();
+    const projectsData = data.projects || [];
   const [visibleCount, setVisibleCount] = React.useState(3);
   const displayedProjects = projectsData.slice(0, visibleCount);
 
   const handleLoadMore = () => {
     setVisibleCount(projectsData.length);
   };
+
+  if (loading) return <div className="text-white text-center py-20">Loading Projects...</div>;
 
   return (
     <section className="w-full flex flex-col items-center md:items-start py-10 md:py-20 px-0 relative z-10" id="projects" aria-labelledby="projects-heading">
