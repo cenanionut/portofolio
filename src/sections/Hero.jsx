@@ -10,8 +10,7 @@ const Hero = () => {
       </h1>
       
       <p className="text-[#999999] text-[16px] md:text-[18px] leading-relaxed max-w-[600px] font-medium">
-        I design and build modern digital experiences across web, mobile, and automation. 
-        My focus is on creating elegant, scalable solutions that bridge innovation with real-world impact.
+        I build production-ready web applications and intelligent automation systems that solve real business problems. With a strong foundation in full-stack development and a growing edge in AI-driven solutions, I thrive at the intersection of clean code, scalable architecture, and smart automation.
       </p>
     </div>
   );

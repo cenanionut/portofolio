@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layers, Layout, ArrowRight } from 'lucide-react'; 
+import { scrollToElement } from '../utils/scrollUtils';
 
 const OrangeCardSVG = () => (
   <svg 
@@ -47,8 +48,17 @@ const FocusCards = () => {
         className="relative overflow-hidden rounded-[10px] p-[32px] flex flex-col justify-between min-h-[260px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02] active:scale-[1.02] shrink-0 w-full md:w-[340px]"
         style={{ backgroundColor: 'rgb(244, 108, 56)' }}
         tabIndex={0}
-        role="link"
-        aria-label="Interactive Apps & Motion Design"
+        role="button"
+        aria-label="Interactive Apps & Motion Design - View Projects"
+        onClick={() => {
+          scrollToElement('projects');
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            scrollToElement('projects');
+          }
+        }}
       >
         <OrangeCardSVG />
         
@@ -72,8 +82,17 @@ const FocusCards = () => {
         className="relative overflow-hidden rounded-[10px] p-[32px] flex flex-col justify-between min-h-[260px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02] active:scale-[1.02] grow w-full"
         style={{ backgroundColor: 'rgb(197, 255, 65)' }}
         tabIndex={0}
-        role="link"
-        aria-label="Enterprise Automation & Agentic Robots"
+        role="button"
+        aria-label="Enterprise Automation & Agentic Robots - View Experience"
+        onClick={() => {
+          scrollToElement('experience');
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            scrollToElement('experience');
+          }
+        }}
       >
         <GreenCardSVG />
 

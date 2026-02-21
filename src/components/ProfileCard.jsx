@@ -69,7 +69,7 @@ const ProfileCard = () => {
 
         {/* Bio */}
         <p className="text-[#767676] text-[15px] leading-relaxed px-10 mt-5 mb-6 font-medium">
-          Blending creativity with code to craft impactful digital products.
+          Building smart interfaces and intelligent systems, from pixel to pipeline.
         </p>
 
         {/* Social Icons */}

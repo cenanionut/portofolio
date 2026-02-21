@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, Folder, Briefcase, Wrench, Send } from 'lucide-react';
+import { scrollToElement } from '../utils/scrollUtils';
 
 const Navbar = () => {
     const navItems = [
@@ -17,6 +18,14 @@ const Navbar = () => {
                     <a
                         key={item.id}
                         href={item.href}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            if (item.href === '#') {
+                                scrollToElement(0); // Scroll to top
+                            } else {
+                                scrollToElement(item.id);
+                            }
+                        }}
                         className="p-3 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
                         aria-label={item.label}
                         title={item.label}

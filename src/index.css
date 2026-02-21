@@ -10,9 +10,7 @@
   font-family: var(--font-sans);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* Global scroll-behavior is now handled by src/utils/scrollUtils.js for a premium feel */
 
 /* Global focus-visible indicator for keyboard navigability */
 *:focus-visible {
