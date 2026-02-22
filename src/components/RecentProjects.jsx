@@ -1,16 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import PrivateProjectModal from './PrivateProjectModal';
 import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const RecentProjects = () => {
     const { data, loading } = usePortfolioData();
     const projectsData = data.projects || [];
   const [visibleCount, setVisibleCount] = React.useState(3);
+  const [selectedProject, setSelectedProject] = React.useState(null);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  
   const displayedProjects = projectsData.slice(0, visibleCount);
 
   const handleLoadMore = () => {
     setVisibleCount(projectsData.length);
+  };
+
+  const handlePrivateClick = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
   };
 
   if (loading) return <div className="text-white text-center py-20">Loading Projects...</div>;
@@ -34,9 +43,19 @@ const RecentProjects = () => {
       {/* Grid/List */}
       <div className="w-full flex flex-col gap-12 mb-16">
         {displayedProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard 
+            key={project.id} 
+            project={project} 
+            onPrivateClick={() => handlePrivateClick(project)}
+          />
         ))}
       </div>
+
+      <PrivateProjectModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        projectTitle={selectedProject?.title}
+      />
 
       {/* Load More Button */}
       {visibleCount < projectsData.length && (
