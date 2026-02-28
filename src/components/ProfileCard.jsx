@@ -1,8 +1,27 @@
 import React from 'react';
-import { Linkedin, Github, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail, Download } from 'lucide-react';
 import avatarImage from '../assets/avatar.webp';
 
 const ProfileCard = () => {
+  const handleDownloadCV = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/Ionut_Cenan_CV.pdf');
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Ionut_Cenan_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      // Fallback: open in new tab if fetch fails
+      window.open('/Ionut_Cenan_CV.pdf', '_blank');
+    }
+  };
+
   return (
     <div className="relative w-full max-w-[320px] mx-auto">
 
@@ -73,7 +92,7 @@ const ProfileCard = () => {
         </p>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-3 pb-10">
+        <div className="flex items-center gap-3 pb-5">
           <a 
             href="https://www.linkedin.com/in/ionut-cenan/" 
             target="_blank" 
@@ -100,6 +119,23 @@ const ProfileCard = () => {
             <Mail size={22} aria-hidden="true" />
           </a>
         </div>
+
+        {/* Download CV Button */}
+        <button
+          onClick={handleDownloadCV}
+          aria-label="Download CV as PDF"
+          className="group flex items-center gap-2.5 mb-10 px-7 py-3 rounded-full cursor-pointer
+                     bg-[#FF5D01] text-white font-semibold text-[14px] tracking-wide
+                     border-none outline-none
+                     shadow-[0_4px_16px_rgba(255,93,1,0.35)]
+                     hover:shadow-[0_6px_24px_rgba(255,93,1,0.5)]
+                     hover:-translate-y-0.5
+                     active:translate-y-0 active:shadow-[0_2px_8px_rgba(255,93,1,0.3)]
+                     transition-all duration-200 ease-out"
+        >
+          <Download size={17} className="transition-transform duration-200 group-hover:translate-y-[1px]" aria-hidden="true" />
+          Download CV
+        </button>
       </div>
     </div>
   );
