@@ -2,24 +2,6 @@
   "education": [
     {
       "id": 1,
-      "title": "Agentic Automation Associate",
-      "issuer": "UiPath",
-      "date": "September 2025",
-      "technologies": "Agentic Automation",
-      "iconType": "uipath",
-      "iconColor": "#FA4616"
-    },
-    {
-      "id": 2,
-      "title": "Unity Essentials Pathway",
-      "issuer": "Unity Technologies Corporation",
-      "date": "April 2025",
-      "technologies": "Game Development · Unity",
-      "iconType": "unity",
-      "iconColor": "#FFFFFF"
-    },
-    {
-      "id": 3,
       "title": "The Modern React Bootcamp (Hooks, Context, NextJS, Router)",
       "issuer": "Udemy",
       "date": "February 2025",
@@ -28,16 +10,52 @@
       "iconColor": "#61DAFB"
     },
     {
-      "id": 4,
-      "title": "React – The Complete Guide 2025 (incl. Next.js, Redux)",
+      "id": 2,
+      "title": "The Web Developer Bootcamp 2024",
       "issuer": "Udemy",
-      "date": "In progress",
-      "technologies": "React, Hooks, Redux, React Router, Next.js, Best Practices and way more.",
-      "iconType": "react_redux",
+      "date": "November 2024",
+      "technologies": "Modern JavaScript, APIs, SQL, MongoDB, Ajax, NodeJS and more.",
+      "iconType": "react",
       "iconColor": "#61DAFB"
     },
     {
+      "id": 3,
+      "title": "CS50x: Introduction to Computer Science",
+      "issuer": "Harvard University",
+      "date": "November 2024",
+      "technologies": "C, Python, SQL, Algorithms, Data Structures, Cybersecurity, Artificial Intelligence, and more.",
+      "iconType": "harvard",
+      "iconColor": "#A51C30"
+    },
+    {
+      "id": 4,
+      "title": "Agentic Automation Associate",
+      "issuer": "UiPath",
+      "date": "September 2025",
+      "technologies": "Agentic Automation",
+      "iconType": "uipath",
+      "iconColor": "#FA4616"
+    },
+    {
       "id": 5,
+      "title": "Unity Essentials Pathway & Junior Programmer",
+      "issuer": "Unity Technologies Corporation",
+      "date": "April 2025",
+      "technologies": "Game Development · Unity",
+      "iconType": "unity",
+      "iconColor": "#FFFFFF"
+    },
+    {
+      "id": 6,
+      "title": "Learn to Code in Python: Programming beginner to advanced",
+      "issuer": "Udemy",
+      "date": "January 2025",
+      "technologies": "Python, Object-Oriented Programming, Data Analysis, Web Scraping, Automation, and more.",
+      "iconType": "python",
+      "iconColor": "#3776AB"
+    },
+    {
+      "id": 7,
       "title": "Typescript: The Complete Developer's Guide",
       "issuer": "Udemy",
       "date": "In progress",
@@ -46,7 +64,16 @@
       "iconColor": "#3178C6"
     },
     {
-      "id": 6,
+      "id": 8,
+      "title": "React - The Complete Guide 2025 (incl. Next.js, Redux)",
+      "issuer": "Udemy",
+      "date": "In progress",
+      "technologies": "React, Hooks, Redux, React Router, Next.js, Best Practices and way more.",
+      "iconType": "react",
+      "iconColor": "#61DAFB"
+    },
+    {
+      "id": 9,
       "title": "Fundamentals of digital marketing",
       "issuer": "Google",
       "date": "Issued May 2022",
@@ -61,38 +88,41 @@
       "role": "Software Engineer",
       "company": "Endava",
       "period": "Jan 2021 - Present",
-      "description": "Experienced Application Management Engineer skilled in web development, debugging, Agile, delivering new products, maintaining existing ones, and continuously learning technologies."
+      "description": "Delivered full-stack solutions for international insurance platforms, driving API integrations, AI-powered automation workflows, and ISO 27001-compliant systems that eliminated manual processes at scale."
     },
     {
       "id": 2,
       "role": "Electronic Technician",
       "company": "Ultratech Int",
       "period": "2021",
-      "description": "Repaired industrial electronic machines, specialized in Human Machine Interfaces, maintained power inverters, implemented preventative measures, and mentored new colleagues to ensure optimal performance and minimal downtime."
+      "description": "Diagnosed and resolved complex industrial HMI failures, reduced equipment downtime through preventative maintenance, and mentored junior technicians to strengthen overall team performance."
     },
     {
       "id": 3,
       "role": "Online Computer Science Tutor",
       "company": "Freelance (Self employed)",
       "period": "Seasonal 2020",
-      "description": "Taught C++ programming online to high school students, designed assessments, and evaluated progress to enhance learning and retention."
+      "description": "Delivered 50+ personalized C++ lessons to high school students, adapting teaching strategies to individual learning styles and measurably improving their problem-solving skills."
     },
     {
       "id": 4,
       "role": "Sales Team Lead",
       "company": "Clock Advertising",
       "period": "2019 - 2020",
-      "description": "Led a sales team at festivals, promoting products, managing schedules, analyzing performance, providing feedback, and coordinating resources effectively."
+      "description": "Led and coordinated a sales team across live events, managing performance, providing structured feedback, and ensuring smooth operations under fast-paced, high-pressure environments."
     }
   ],
   "projects": [
     {
-      "id": "stockcheck",
-      "title": "StockCheck",
-      "description": "Android App - Search products, manage inventory lists, and check real-time prices instantly for your business",
-      "tags": ["ReactNative", "Firebase"],
+      "id": "insurance",
+      "title": "DocuSafe",
+      "description": "Insurance Analyzer - AI-powered document intelligence.",
+      "tags": ["React", "Node.js + Express", "MongoDB", "Gemini"],
       "link": "#",
-      "image": "/stock.png" 
+      "image": "solar.png",
+      "url": "https://docusafe.ionutcenan.ro",
+      "githubUrl": "https://github.com/cenanionut/insurance-doc-analyzer",
+      "videoSlug": "docusafe"
     },
     {
       "id": "yelpcamp",
@@ -100,7 +130,51 @@
       "description": "Web App - Discover, review, and share campgrounds from around the world.",
       "tags": ["Javascript", "Node.js", "MongoDB"],
       "link": "#",
-      "image": "/yelpcamp.png"
+      "image": "/yelpcamp.png",
+      "url": "https://www.camp.ionutcenan.ro",
+      "githubUrl": "https://github.com/cenanionut/yelpcamp",
+      "videoSlug": "yelpcamp"
+    },
+    {
+      "id": "stockcheck",
+      "title": "StockCheck",
+      "description": "Android App - Search products, manage inventory lists, and check real-time prices instantly for your business",
+      "tags": ["ReactNative", "Firebase"],
+      "link": "#",
+      "image": "/stock.png"
+    },
+    {
+      "id": "colors",
+      "title": "React Colors",
+      "description": "Web App – allows users to browse, create, and manage color palettes. It provides an intuitive UI for selecting colors, adjusting shades, and copying color codes.",
+      "tags": ["React", "React Router", "Material-UI", "rc-slider"],
+      "link": "#",
+      "image": "colors.png",
+      "url": "",
+      "githubUrl": "https://github.com/cenanionut/react-colors",
+      "videoSlug": "colors"
+    },
+    {
+      "id": "smartpanel",
+      "title": "SmartPanel",
+      "description": "Web App – Monitor solar panel performance in real time, track energy output, and receive intelligent optimization insights powered by Arduino sensors.",
+      "tags": ["JavaScript", "Bootstrap", "Firebase", "Arduino"],
+      "link": "#",
+      "image": "solar.png",
+      "url": "https://solarpowercnn.web.app",
+      "githubUrl": "https://github.com/cenanionut/solarpower",
+      "videoSlug": "solarpower"
+    },
+    {
+      "id": "cnnkitchen",
+      "title": "CNNKitchen",
+      "description": "Web App – A modern culinary SaaS platform to browse, manage, and showcase recipes with a clean, intuitive interface built for food enthusiasts and professionals alike.",
+      "tags": ["SAAS", "Javascript", "Firebase"],
+      "link": "#",
+      "image": "/restaurant.png",
+      "url": "https://cnn-kitchen.web.app",
+      "githubUrl": "https://github.com/cenanionut/kitchen",
+      "videoSlug": "kitchen"
     },
     {
       "id": "burgerbuilder",
@@ -108,23 +182,10 @@
       "description": "Web App - Build your perfect custom burger with real-time visual preview, then login and order instantly.",
       "tags": ["React", "CSS3", "Firebase"],
       "link": "#",
-      "image": "/burger.png"
-    },
-    {
-      "id": "smartpanel",
-      "title": "SmartPanel",
-      "description": "Intelligent Solar Panel System",
-      "tags": ["JavaScript", "Bootstrap", "Firebase", "Arduino"],
-      "link": "#",
-      "image": "solar.png"
-    },
-    {
-      "id": "cnnkitchen",
-      "title": "CNNKitchen",
-      "description": "Culinary Design Showcase",
-      "tags": ["SAAS", "Javascript", "Firebase"],
-      "link": "#",
-      "image": "/restaurant.png"
+      "image": "/burger.png",
+      "url": "",
+      "githubUrl": "",
+      "videoSlug": ""
     }
   ],
   "skills": [

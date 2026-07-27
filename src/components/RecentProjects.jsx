@@ -2,25 +2,31 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import PrivateProjectModal from './PrivateProjectModal';
+import ProjectModal from './ProjectModal';
 import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const RecentProjects = () => {
     const { data, loading } = usePortfolioData();
     const projectsData = data.projects || [];
   const [visibleCount, setVisibleCount] = React.useState(3);
-  const [selectedProject, setSelectedProject] = React.useState(null);
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
-  
+  const [activeProject, setActiveProject] = React.useState(null);
+  // Which modal is open, if any. Kept separate from `activeProject` so the
+  // project (and its content) stays in place during the close animation
+  // instead of vanishing the instant the modal starts to exit.
+  const [activeModalType, setActiveModalType] = React.useState(null); // 'private' | 'showcase' | null
+
   const displayedProjects = projectsData.slice(0, visibleCount);
 
   const handleLoadMore = () => {
     setVisibleCount(projectsData.length);
   };
 
-  const handlePrivateClick = (project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
+  const handleCardOpen = (project) => {
+    setActiveProject(project);
+    setActiveModalType(project.url || project.githubUrl ? 'showcase' : 'private');
   };
+
+  const closeModal = () => setActiveModalType(null);
 
   if (loading) return <div className="text-white text-center py-20">Loading Projects...</div>;
 
@@ -43,18 +49,24 @@ const RecentProjects = () => {
       {/* Grid/List */}
       <div className="w-full flex flex-col gap-12 mb-16">
         {displayedProjects.map((project) => (
-          <ProjectCard 
-            key={project.id} 
-            project={project} 
-            onPrivateClick={() => handlePrivateClick(project)}
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onOpen={handleCardOpen}
           />
         ))}
       </div>
 
-      <PrivateProjectModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        projectTitle={selectedProject?.title}
+      <PrivateProjectModal
+        isOpen={activeModalType === 'private'}
+        onClose={closeModal}
+        projectTitle={activeProject?.title}
+      />
+
+      <ProjectModal
+        project={activeProject}
+        isOpen={activeModalType === 'showcase'}
+        onClose={closeModal}
       />
 
       {/* Load More Button */}

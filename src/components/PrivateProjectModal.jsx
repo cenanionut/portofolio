@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useId, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, X } from 'lucide-react';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
+import { useModalFocusTrap } from '../hooks/useModalFocusTrap';
 
 const PrivateProjectModal = ({ isOpen, onClose, projectTitle }) => {
-  return (
+  const panelRef = useRef(null);
+  const titleId = useId();
+
+  useBodyScrollLock(isOpen);
+  useModalFocusTrap({ isOpen, panelRef, onClose });
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
@@ -14,10 +23,15 @@ const PrivateProjectModal = ({ isOpen, onClose, projectTitle }) => {
             exit={{ opacity: 0 }}
             onClick={onClose}
             className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            aria-hidden="true"
           />
 
           {/* Modal Content */}
           <motion.div
+            ref={panelRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={titleId}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -26,7 +40,7 @@ const PrivateProjectModal = ({ isOpen, onClose, projectTitle }) => {
           >
             {/* Animated Background Gradient */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF6B00] to-transparent" />
-            
+
             <button
               onClick={onClose}
               className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/5 text-white/40 hover:text-white transition-colors"
@@ -40,10 +54,10 @@ const PrivateProjectModal = ({ isOpen, onClose, projectTitle }) => {
                 <Lock size={32} />
               </div>
 
-              <h3 className="text-white text-2xl font-bold mb-4">
+              <h3 id={titleId} className="text-white text-2xl font-bold mb-4">
                 {projectTitle || 'Private Project'}
               </h3>
-              
+
               <div className="space-y-4">
                 <p className="text-[#999999] leading-relaxed">
                   This project is currently private and not available for public viewing due to confidentiality or ongoing development.
@@ -64,7 +78,8 @@ const PrivateProjectModal = ({ isOpen, onClose, projectTitle }) => {
           </motion.div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 

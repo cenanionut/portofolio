@@ -1,15 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ project, onPrivateClick }) => {
+const ProjectCard = ({ project, onOpen }) => {
   const [imageError, setImageError] = React.useState(false);
+  const hasLink = Boolean(project.url || project.githubUrl);
 
-  const handleClick = (e) => {
-    if (project.url) {
-      window.open(project.url, '_blank', 'noopener,noreferrer');
-    } else {
-      onPrivateClick();
-    }
+  const handleClick = () => {
+    onOpen(project);
   };
 
   const handleKeyDown = (e) => {
@@ -25,7 +22,7 @@ const ProjectCard = ({ project, onPrivateClick }) => {
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="button"
-      aria-label={`View ${project.title}${!project.url ? ' (Private)' : ''}`}
+      aria-label={`View ${project.title}${!hasLink ? ' (Private)' : ''}`}
       className="flex flex-col items-center md:items-start md:flex-row gap-8 w-full group text-center md:text-left cursor-pointer outline-none focus:ring-2 focus:ring-[#FF6B00] focus:ring-offset-4 focus:ring-offset-[rgb(21,19,18)] rounded-[24px]"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +59,7 @@ const ProjectCard = ({ project, onPrivateClick }) => {
              
              {/* Arrow Icon or Lock */}
              <div className="text-[#FF6B00] transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-                {project.url ? (
+                {hasLink ? (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
