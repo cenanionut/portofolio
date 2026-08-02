@@ -186,6 +186,17 @@
       "url": "",
       "githubUrl": "",
       "videoSlug": ""
+    },
+    {
+      "id": "dashboard",
+      "title": "Life Dashboard",
+      "description": "Web App – Self-hosted personal dashboard bundling job search, payday, subscriptions, wishlist, and task board trackers behind Google sign-in.",
+      "tags": ["React", "TypeScript", "Node.js + Express", "PostgreSQL"],
+      "link": "#",
+      "image": "/dashboard.png",
+      "url": "",
+      "githubUrl": "https://github.com/cenanionut/life-dashboard",
+      "videoSlug": "dashboard"
     }
   ],
   "skills": [
